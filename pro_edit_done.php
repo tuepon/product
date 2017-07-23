@@ -14,7 +14,7 @@ try
 $pro_code=$_POST['code'];
 $pro_name=$_POST['name'];
 $pro_price=$_POST['price'];
-$pro_gazou_name_old=$_POST['pro_gazou_name_old'];
+$pro_gazou_name_old=$_POST['gazou_name_old'];
 $pro_gazou_name=$_POST['gazou_name'];
 
 $pro_code=htmlspecialchars($pro_code,ENT_QUOTES,'UTF-8');
@@ -37,9 +37,12 @@ $stmt->execute($data);
 
 $dbh=null;
 
-if($pro_gazou_name_old!='') //古い画像が空でなければ
+if($pro_gazou_name_old!=$pro_gazou_name) //今の画像と新しい画像が異なっていれば
 {
+    if($pro_gazou_name_old!='') //古い画像が空でなければ
+    {
     unlink('./gazou/'.$pro_gazou_name_old);
+    }
 }
 
 print '修正しました。<br>';

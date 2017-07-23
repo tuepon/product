@@ -56,6 +56,8 @@ catch(Exception $e)
 商品名<br>
 <?php print $pro_name; ?>
 <br>
+<?php print $disp_gazou; ?>
+<br>
 この商品を削除してよろしいですか？<br>
 <br>
 <form method="post" action="pro_delete_done.php">

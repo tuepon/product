@@ -27,14 +27,20 @@ $password='123456';
 $dbh=new PDO($dsn,$user,$password);
 $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-$sql='UPDATE mst_product SET name=?,price=? WHERE code=?'; //レコード更新
+$sql='UPDATE mst_product SET name=?,price=?,gazou=? WHERE code=?'; //レコード更新
 $stmt=$dbh->prepare($sql);
 $data[]=$pro_name;
 $data[]=$pro_price;
+$data[]=$pro_gazou_name;
 $data[]=$pro_code;
 $stmt->execute($data);
 
 $dbh=null;
+
+if($pro_gazou_name_old!='') //古い画像が空でなければ
+{
+    unlink('./gazou/'.$pro_gazou_name_old);
+}
 
 print '修正しました。<br>';
 

@@ -1,0 +1,67 @@
+ファイルの改造履歴
+
+・スタッフ修正チェック画面
+staff_add_check.php → staff_edit_check.php
+
+・スタッフ修正実行画面
+staff_add_done.php → staff_edit_done.php
+
+・スタッフ削除画面
+staff_edit.php → staff_delete.php
+
+・スタッフ削除実行画面
+staff_edit_done.php → staff_delete_done.php
+
+・スタッフ一覧画面にスタッフ追加とスタッフ参照のボタン追加
+staff_list.php, staff_branch.phpを改造
+
+・スタッフ参照画面
+staff_edit.php → staff_disp.php
+
+・商品追加画面
+staff_add.php → pro_add.php
+
+・商品追加実行画面
+staff_add_done.php → pro_add_done.php
+
+・商品一覧画面
+staff_list.php → pro_list.php
+
+・分岐画面
+staff_branch.php → pro_branch.php
+
+・エラー画面
+staff_ng.php → pro_ng.php
+
+・商品詳細画面
+staff_disp.php → pro_disp.php
+
+・商品修正画面
+staff_edit.php → pro_edit.php
+
+・商品修正チェック画面
+pro_add_check.php → pro_add_check.php
+
+・商品修正実行画面
+pro_add_done.php → pro_edit_done.php
+
+・商品削除画面
+staff_delete.php → pro_delete.php
+
+・商品削除実行画面
+staff_delete_done.php → pro_delete_done.php
+
+・商品画像追加
+pro_add.php, pro_add_check.php
+
+・画像のファイル名をデータベースに追加する
+pro_add_done.php
+
+・商品詳細参照に画像を表示する
+pro_disp.php
+
+・商品修正画面で画像を扱う
+pro_edit.php
+
+
+

@@ -1,3 +1,20 @@
+<?php
+session_start();
+session_regenerate_id(true);
+if(isset($_SESSION['login'])==false)
+{
+    print 'ログインされていません。<br>';
+    print '<a href="../staff_login/staff_login.html"> ログイン画面へ </a>';
+    exit();
+}
+else
+{
+    print $_SESSION['staff_name'];
+    print 'さんログイン中<br>';
+    print '<br>';
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -62,6 +79,7 @@ catch(Exception $e)
 <br>
 <form method="post" action="pro_delete_done.php">
 <input type="hidden" name="code" value="<?php print $pro_code; ?>">
+<input type="hidden" name="gazou_name" value="<?php print $pro_gazou_name; ?>">
 <input type="button" onclick="history.back()" value="戻る">
 <input type="submit" value="OK">
 </form>
